@@ -1,0 +1,19 @@
+<div class="d-flex justify-content-center mt-3">
+  <button mat-button [routerLink]="['/computers']">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+  <mat-card class="col-6 custom-background" *ngIf="computers$ | async as computer">
+    <mat-card-header class="align-self-center">
+      <mat-card-title>
+        <h3 mat-line>Computer Id</h3>
+        <p>{{computer.id}}</p>
+        <h3 mat-line>Computer Title</h3>
+        <p>{{computer.title}}</p>
+        <h3 mat-line>Computer Details</h3>
+        <p>{{computer.details}}</p>
+        <h3 mat-line>Approved by Customer</h3>
+        <p>{{computer.approved}}</p>
+      </mat-card-title>
+    </mat-card-header>
+  </mat-card>
+</div>
