@@ -6,7 +6,7 @@
   </mat-card-header>
   <mat-card-content>
     <mat-list>
-      <mat-list-item *ngFor="let computer of computers" (click)="select(computer)" class="mat-list-option border-bottom">
+      <mat-list-item *ngFor="let computer of computers; let last = last" [ngClass]="{'no-bottom-border': last}" (click)="select(computer)" class="mat-list-option border-bottom">
         <h3 mat-line>
           {{computer.title}}
         </h3>
